@@ -1,0 +1,402 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Django1.8+Python3.4+Mysql5.5 | Swust - Tian_dd</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1、开发环境
+系统：
+
+
+数据库：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Django1.8+Python3.4+Mysql5.5">
+<meta property="og:url" content="/2015/06/17/Django1.8+Python3.4+Mysql5.5/index.html">
+<meta property="og:site_name" content="Swust - Tian_dd">
+<meta property="og:description" content="1、开发环境
+系统：
+
+
+数据库：">
+<meta property="og:image" content="http://static.oschina.net/uploads/space/2015/0617/192235_lxVE_1863482.png">
+<meta property="og:image" content="http://static.oschina.net/uploads/space/2015/0617/182004_4xEu_1863482.png">
+<meta property="og:image" content="http://static.oschina.net/uploads/space/2015/0617/182127_LcK4_1863482.png">
+<meta property="og:image" content="http://static.oschina.net/uploads/space/2015/0617/182557_AHsc_1863482.png">
+<meta property="og:image" content="http://static.oschina.net/uploads/space/2015/0617/183316_w3QC_1863482.png">
+<meta property="og:image" content="http://static.oschina.net/uploads/space/2015/0617/184306_dZhg_1863482.png">
+<meta property="og:image" content="http://static.oschina.net/uploads/space/2015/0617/185736_UCul_1863482.png">
+<meta property="og:image" content="http://static.oschina.net/uploads/space/2015/0617/191604_PVKe_1863482.png">
+<meta property="og:image" content="http://static.oschina.net/uploads/space/2015/0617/192006_27E5_1863482.png">
+<meta property="og:image" content="http://static.oschina.net/uploads/space/2015/0617/192119_16hh_1863482.png">
+<meta property="og:image" content="http://static.oschina.net/uploads/space/2015/0617/203509_wNZQ_1863482.png">
+<meta property="og:updated_time" content="2015-06-25T06:49:13.532Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Django1.8+Python3.4+Mysql5.5">
+<meta name="twitter:description" content="1、开发环境
+系统：
+
+
+数据库：">
+  
+    <link rel="alternative" href="/atom.xml" title="Swust - Tian_dd" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  
+</head>
+<body>
+<div id="container">
+  <div id="wrap">
+    <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Swust - Tian_dd</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="http://www.baidu.com/baidu" method="get" accept-charset="utf-8" class="search-form">
+          <input type="search" name="word" maxlength="20" class="search-form-input" placeholder="Search">
+          <input type="submit" value="" class="search-form-submit">
+          <input name=tn type=hidden value="bds">
+          <input name=cl type=hidden value="3">
+          <input name=ct type=hidden value="2097152">
+          <input type="hidden" name="si" value="">
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+    <div class="outer">
+      <section id="main"><article id="post-Django1.8+Python3.4+Mysql5.5" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/06/17/Django1.8+Python3.4+Mysql5.5/" class="article-date">
+  <time datetime="2015-06-17T12:44:12.000Z" itemprop="datePublished">2015-06-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Django1.8+Python3.4+Mysql5.5
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、开发环境</p>
+<font color="red">系统：</font>
+
+<p><img src="http://static.oschina.net/uploads/space/2015/0617/192235_lxVE_1863482.png" alt="ui-demo"></p>
+<font color="red">数据库：</font><br><a id="more"></a><br><img src="http://static.oschina.net/uploads/space/2015/0617/182004_4xEu_1863482.png" alt="ui-demo"><br><br><font color="red">编程语言：：</font>
+
+<p><img src="http://static.oschina.net/uploads/space/2015/0617/182127_LcK4_1863482.png" alt="ui-demo"></p>
+<font color="red">框架：</font>
+
+<p><img src="http://static.oschina.net/uploads/space/2015/0617/182557_AHsc_1863482.png" alt="ui-demo"></p>
+<font color="red">IDE:</font>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PyCharm <span class="number">4.5</span></span><br></pre></td></tr></table></figure>
+<p>2、新建Django工程，配置</p>
+<font color="red">新建Django工程：</font>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">django-admin startproject Django_Test</span><br></pre></td></tr></table></figure>
+<font color="red">目录结构：</font>
+
+<p><img src="http://static.oschina.net/uploads/space/2015/0617/183316_w3QC_1863482.png" alt="ui-demo"></p>
+<font color="red">官网介绍：</font>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">The outer Django_Test/ root directory is just a container <span class="keyword">for</span> your project. Its name doesn’t matter to Django; you can rename it to anything you like.</span><br><span class="line"></span><br><span class="line">manage.py: A command-line utility that lets you interact with <span class="keyword">this</span> Django project in various ways. You can read all the details about manage.py in django-admin and manage.py.</span><br><span class="line"></span><br><span class="line">The inner Django_Test/ directory is the actual Python <span class="keyword">package</span> <span class="keyword">for</span> your project. Its name is the Python <span class="keyword">package</span> name you’ll need to use to <span class="keyword">import</span> anything inside it .</span><br><span class="line"></span><br><span class="line">Django_Test/__init__.py: An empty file that tells Python that <span class="keyword">this</span> directory should be considered a Python <span class="keyword">package</span>. (Read more about packages in the official Python docs <span class="keyword">if</span> you’re a Python beginner.)</span><br><span class="line"></span><br><span class="line">Django_Test/settings.py: Settings/configuration <span class="keyword">for</span> <span class="keyword">this</span> Django project. Django settings will tell you all about how settings work.</span><br><span class="line"></span><br><span class="line">Django_Test/urls.py: The URL declarations <span class="keyword">for</span> <span class="keyword">this</span> Django project; a “table of contents” of your Django-powered site. You can read more about URLs in URL dispatcher.</span><br><span class="line"></span><br><span class="line">Django_Test/wsgi.py: An entry-point <span class="keyword">for</span> WSGI-compatible web servers to serve your project. See How to deploy with WSGI <span class="keyword">for</span> more details.</span><br></pre></td></tr></table></figure>
+<font color="red">启动工程：</font>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 manage.py runserver</span><br></pre></td></tr></table></figure>
+<p>输入：<a href="http://localhost:8000" target="_blank" rel="external">http://localhost:8000</a></p>
+<p><img src="http://static.oschina.net/uploads/space/2015/0617/184306_dZhg_1863482.png" alt="ui-demo"></p>
+<p>说明你已经正确启动了Django工程！</p>
+<font color="red">配置Django对Mysql操作:</font>
+
+<p>默认情况下，Django连接的是SqlLite，现在我们需要配置Mysql：</p>
+<p>现在我们用PyMySQL:  官网地址：<a href="https://github.com/PyMySQL/PyMySQL/" target="_blank" rel="external">https://github.com/PyMySQL/PyMySQL/</a></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pip3 install PyMySQL</span><br></pre></td></tr></table></figure>
+<font color="red">配置Django工程：</font>
+
+<p>1.在<strong>init</strong>.py文件中，添加这句话</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line">pymysql.install_as_MySQLdb()</span><br></pre></td></tr></table></figure>
+<p>2.修改settings.py文件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> DATABASES = &#123;</span><br><span class="line">    <span class="string">'default'</span>: &#123;</span><br><span class="line">         <span class="string">'ENGINE'</span>: <span class="string">'django.db.backends.mysql'</span>,</span><br><span class="line">         <span class="string">'NAME'</span>: <span class="string">'django_test'</span>,</span><br><span class="line">         <span class="string">'USER'</span>:<span class="string">'root'</span>,</span><br><span class="line">         <span class="string">'PASSWORD'</span>:<span class="string">'root'</span>,</span><br><span class="line">         <span class="string">'HOST'</span>:<span class="string">''</span>, #默认：<span class="number">127.0</span>.0.1</span><br><span class="line">         <span class="string">'PORT'</span>:<span class="string">''</span>, #默认：<span class="number">3306</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>3、自动生成数据库表</p>
+<p>Django项目是按照模块来开发的，我们先建立一个.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 manage.py startapp user</span><br></pre></td></tr></table></figure>
+<font color="red">结构：</font>
+
+<p><img src="http://static.oschina.net/uploads/space/2015/0617/185736_UCul_1863482.png" alt="ui-demo"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">user/migrations: 数据库迁移用文件夹，创建的migrate会存在这个文件夹里。</span><br><span class="line"></span><br><span class="line">user/_init_.py: 初始化数据信息。</span><br><span class="line"></span><br><span class="line">user/admin.py：当前应用在Django管理界面的设置。</span><br><span class="line"></span><br><span class="line">user/models.py：模型文件，用 Python 类来描述数据表。</span><br><span class="line"></span><br><span class="line">user.tests.py：单元测试文件。</span><br><span class="line"></span><br><span class="line">user.views.py：视图展示部分。</span><br></pre></td></tr></table></figure>
+<font color="red">配置：</font>
+
+<p>user/models.py(表结构从网上资源活取得到，实际使用根据具体情况)：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"> from django.db import models</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">class Publisher(models.Model):</span><br><span class="line"> </span><br><span class="line">    name = models.CharField(max_length=30)</span><br><span class="line">    address = models.CharField(max_length=50)</span><br><span class="line">    city = models.CharField(max_length=60)</span><br><span class="line">    state_province = models.CharField(max_length=30)</span><br><span class="line">    country = models.CharField(max_length=50)</span><br><span class="line">    website = models.URLField()</span><br><span class="line"> </span><br><span class="line">class Author(models.Model):</span><br><span class="line">    salutation = models.CharField(max_length=10)</span><br><span class="line">    first_name = models.CharField(max_length=30)</span><br><span class="line">    last_name = models.CharField(max_length=40)</span><br><span class="line">    email = models.EmailField()</span><br><span class="line">    headshot = models.ImageField(upload_to='/tmp')</span><br><span class="line"> </span><br><span class="line">class Book(models.Model):</span><br><span class="line">    title = models.CharField(max_length=100)</span><br><span class="line">    authors = models.ManyToManyField(Author)</span><br><span class="line">    publisher = models.ForeignKey(Publisher)</span><br><span class="line">    publication_date = models.DateField()</span><br></pre></td></tr></table></figure>
+<p>settings.py：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br></pre></td><td class="code"><pre><span class="line"> Django settings for Django_Test project.</span><br><span class="line"> </span><br><span class="line">Generated by 'django-admin startproject' using Django 1.8.2.</span><br><span class="line"> </span><br><span class="line">For more information on this file, see</span><br><span class="line">https://docs.djangoproject.com/en/1.8/topics/settings/</span><br><span class="line"> </span><br><span class="line">For the full list of settings and their values, see</span><br><span class="line">https://docs.djangoproject.com/en/1.8/ref/settings/</span><br><span class="line">"""</span><br><span class="line"> </span><br><span class="line"># Build paths inside the project like this: os.path.join(BASE_DIR, ...)</span><br><span class="line">import os</span><br><span class="line"> </span><br><span class="line">BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"># Quick-start development settings - unsuitable for production</span><br><span class="line"># See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/</span><br><span class="line"> </span><br><span class="line"># SECURITY WARNING: keep the secret key used in production secret!</span><br><span class="line">SECRET_KEY = '=uet#f68=px2foi)b(kxficu-k_%fho%)a+mi=i(yo2$9m=ruk'</span><br><span class="line"> </span><br><span class="line"># SECURITY WARNING: don't run with debug turned on in production!</span><br><span class="line">DEBUG = True</span><br><span class="line"> </span><br><span class="line">ALLOWED_HOSTS = []</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"># Application definition</span><br><span class="line"> </span><br><span class="line">INSTALLED_APPS = (</span><br><span class="line">    'django.contrib.admin',</span><br><span class="line">    'django.contrib.auth',</span><br><span class="line">    'django.contrib.contenttypes',</span><br><span class="line">    'django.contrib.sessions',</span><br><span class="line">    'django.contrib.messages',</span><br><span class="line">    'django.contrib.staticfiles',</span><br><span class="line">    'user'</span><br><span class="line">)</span><br><span class="line"> </span><br><span class="line">MIDDLEWARE_CLASSES = (</span><br><span class="line">    'django.contrib.sessions.middleware.SessionMiddleware',</span><br><span class="line">    'django.middleware.common.CommonMiddleware',</span><br><span class="line">    'django.middleware.csrf.CsrfViewMiddleware',</span><br><span class="line">    'django.contrib.auth.middleware.AuthenticationMiddleware',</span><br><span class="line">    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',</span><br><span class="line">    'django.contrib.messages.middleware.MessageMiddleware',</span><br><span class="line">    'django.middleware.clickjacking.XFrameOptionsMiddleware',</span><br><span class="line">    'django.middleware.security.SecurityMiddleware',</span><br><span class="line">    'user.models.Author',</span><br><span class="line">    'user.models.Book',</span><br><span class="line">    'user.models.Publisher'</span><br><span class="line">)</span><br><span class="line"> </span><br><span class="line">ROOT_URLCONF = 'Django_Test.urls'</span><br><span class="line"> </span><br><span class="line">TEMPLATES = [</span><br><span class="line">    &#123;</span><br><span class="line">        'BACKEND': 'django.template.backends.django.DjangoTemplates',</span><br><span class="line">        'DIRS': [],</span><br><span class="line">        'APP_DIRS': True,</span><br><span class="line">        'OPTIONS': &#123;</span><br><span class="line">            'context_processors': [</span><br><span class="line">                'django.template.context_processors.debug',</span><br><span class="line">                'django.template.context_processors.request',</span><br><span class="line">                'django.contrib.auth.context_processors.auth',</span><br><span class="line">                'django.contrib.messages.context_processors.messages',</span><br><span class="line">            ],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">]</span><br><span class="line"> </span><br><span class="line">WSGI_APPLICATION = 'Django_Test.wsgi.application'</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"># Database</span><br><span class="line"># https://docs.djangoproject.com/en/1.8/ref/settings/#databases</span><br><span class="line"> </span><br><span class="line">DATABASES = &#123;</span><br><span class="line">    'default': &#123;</span><br><span class="line">         'ENGINE': 'django.db.backends.mysql',</span><br><span class="line">         'NAME': 'django_test',</span><br><span class="line">         'USER':'root',</span><br><span class="line">         'PASSWORD':'root',</span><br><span class="line">         'HOST':'',</span><br><span class="line">         'PORT':'',</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"># Internationalization</span><br><span class="line"># https://docs.djangoproject.com/en/1.8/topics/i18n/</span><br><span class="line"> </span><br><span class="line">LANGUAGE_CODE = 'en-us'</span><br><span class="line"> </span><br><span class="line">TIME_ZONE = 'UTC'</span><br><span class="line"> </span><br><span class="line">USE_I18N = True</span><br><span class="line"> </span><br><span class="line">USE_L10N = True</span><br><span class="line"> </span><br><span class="line">USE_TZ = True</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"># Static files (CSS, JavaScript, Images)</span><br><span class="line"># https://docs.djangoproject.com/en/1.8/howto/static-files/</span><br><span class="line"> </span><br><span class="line">STATIC_URL = '/static/'</span><br><span class="line"> </span><br><span class="line">TEMPLATE_DIRS = (</span><br><span class="line">    os.path.join(BASE_DIR,  'templates'),</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<font color="red">运行：</font>
+
+<p>检查配置文件</p>
+<p><img src="http://static.oschina.net/uploads/space/2015/0617/191604_PVKe_1863482.png" alt="ui-demo"></p>
+<p>生成数据库表：</p>
+<p><img src="http://static.oschina.net/uploads/space/2015/0617/192006_27E5_1863482.png" alt="ui-demo"></p>
+<p>数据库表：</p>
+<p><img src="http://static.oschina.net/uploads/space/2015/0617/192119_16hh_1863482.png" alt="ui-demo"></p>
+<p>当然，我们还可以通过配置，直接用Django框架访问我们的数据库表：</p>
+<p>user/admin.py:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> from django.contrib <span class="keyword">import</span> admin</span><br><span class="line"> </span><br><span class="line"># Register your models here.</span><br><span class="line"> </span><br><span class="line"># Register your models here.</span><br><span class="line">from user.models <span class="keyword">import</span> Publisher, Author, <span class="function">Book</span><br><span class="line"> </span><br><span class="line">class <span class="title">AuthorAdmin</span><span class="params">(admin.ModelAdmin)</span>:</span><br><span class="line">   list_display</span>=(<span class="string">'first_name'</span>,<span class="string">'last_name'</span>,<span class="string">'email'</span>)</span><br><span class="line">   search_fields=(<span class="string">'first_name'</span>,<span class="string">'last_name'</span>)</span><br><span class="line"> </span><br><span class="line">admin.site.register(Publisher)</span><br><span class="line">admin.site.register(Author,AuthorAdmin)</span><br><span class="line">admin.site.register(Book)</span><br></pre></td></tr></table></figure>
+<p><img src="http://static.oschina.net/uploads/space/2015/0617/203509_wNZQ_1863482.png" alt="ui-demo"></p>
+<font color="red">有了这些，我们就可以在此基础堆积代码了。</font>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="/2015/06/17/Django1.8+Python3.4+Mysql5.5/" data-id="cibbu255s0000yco3utj8yo86" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+        <a href="/2015/06/17/Django1.8+Python3.4+Mysql5.5/#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mysql/">Mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/06/20/Linux命令/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">
+        
+          Linux 用户3个命令小技巧
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/06/15/Python爬虫/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">Python爬虫</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+  <section id="comments">
+    <div id="ds-thread" class="ds-thread" data-thread-key="2015/06/17/Django1.8+Python3.4+Mysql5.5/" data-title="Django1.8+Python3.4+Mysql5.5" data-url="/2015/06/17/Django1.8+Python3.4+Mysql5.5/"></div>
+  </section>
+</section>
+      
+      <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Design-Pattern/">Design Pattern</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Entertainment/">Entertainment</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hadoop/">Hadoop</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Maven/">Maven</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mysql/">Mysql</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Oracle/">Oracle</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tomcat/">Tomcat</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/XML/">XML</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/go/">go</a><span class="category-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design-Pattern/">Design Pattern</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Entertainment/">Entertainment</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hadoop/">Hadoop</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hibernate/">Hibernate</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Https/">Https</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">16</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Json/">Json</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Maven/">Maven</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Memory/">Memory</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mongdb/">Mongdb</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/">Mysql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/">Oracle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Robomongo/">Robomongo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringMVC/">SpringMVC</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tomcat/">Tomcat</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XML/">XML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go/">go</a><span class="tag-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Design-Pattern/" style="font-size: 17.5px;">Design Pattern</a> <a href="/tags/Entertainment/" style="font-size: 10px;">Entertainment</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hadoop/" style="font-size: 15px;">Hadoop</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/Https/" style="font-size: 10px;">Https</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/Json/" style="font-size: 10px;">Json</a> <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/Maven/" style="font-size: 12.5px;">Maven</a> <a href="/tags/Memory/" style="font-size: 10px;">Memory</a> <a href="/tags/Mongdb/" style="font-size: 12.5px;">Mongdb</a> <a href="/tags/Mysql/" style="font-size: 12.5px;">Mysql</a> <a href="/tags/Oracle/" style="font-size: 10px;">Oracle</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Robomongo/" style="font-size: 10px;">Robomongo</a> <a href="/tags/Spring/" style="font-size: 10px;">Spring</a> <a href="/tags/SpringMVC/" style="font-size: 12.5px;">SpringMVC</a> <a href="/tags/Tomcat/" style="font-size: 10px;">Tomcat</a> <a href="/tags/XML/" style="font-size: 10px;">XML</a> <a href="/tags/go/" style="font-size: 12.5px;">go</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">9</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">近期文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/06/20/Linux命令/">Linux 用户3个命令小技巧</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/17/Django1.8+Python3.4+Mysql5.5/">Django1.8+Python3.4+Mysql5.5</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/15/Python爬虫/">Python爬虫</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/11/Python入门/">Python入门</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/09/go语言调用API实现分词/">go语言调用API实现分词</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">友情链接</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="http://weibo.com/3201776564/profile?topnav=1&wvr=6" target="_blank">新浪微博</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+      
+    </div>
+    <footer id="footer">
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Tian_dd<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      .
+      Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>
+    </div>
+	
+	<div>
+	
+	&nbsp;&nbsp;<font color="red" size="2px">Total Views:</font><span id="busuanzi_value_site_pv"></span><font color="red">.</font>
+    &nbsp;&nbsp;&nbsp;&nbsp;<font color="red" size="2px">您是第</font><span id="busuanzi_value_site_uv"></span><font color="red" size="2px">个访客.</font>
+
+	</div>
+  </div>
+  
+</footer>
+
+
+  </div>
+  <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+  <!-- totop start -->
+<div id="totop">
+<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+</div>
+
+<!-- totop end -->
+
+<!-- 多说公共js代码 start -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"tian-dd"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共js代码 end -->
+
+
+<!-- 百度分享 start -->
+
+<div id="article-share-box" class="article-share-box">
+  <div id="bdshare" class="bdsharebuttonbox article-share-links">
+    <a class="article-share-weibo" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a class="article-share-weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a class="article-share-qq" data-cmd="sqq" title="分享到QQ"></a>
+    <a class="article-share-renren" data-cmd="renren" title="分享到人人网"></a>
+    <a class="article-share-more" data-cmd="more" title="更多"></a>
+  </div>
+</div>
+<script>window._bd_share_config={"common":{},"share":{"bdCustomStyle":"/css/bdshare.css"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<!-- 百度分享 end -->
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+</div>
+</body>
+</html>

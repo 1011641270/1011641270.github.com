@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Java 乱码总结 | Swust - Tian_dd</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1.为什么要编码首先计算机是只识别0或者1的（字节），但是我们平时使用的都是字符（英文，中文，其他…）。所以，这期间就涉及到了字符与字节之间的转化过程。而这个过程（字节-&amp;gt;字符，字符-&amp;gt;字节）就是编码！
+2.常用的编码“工具”ASCII编码：是目前计算机中用得最广泛的字符集及其编码。使用指定的7 位或8 位二进制数组合来表示128 或256 种可能的字符。标准ASCII 码也叫基础AS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java 乱码总结">
+<meta property="og:url" content="/2014/11/15/Java 乱码总结/index.html">
+<meta property="og:site_name" content="Swust - Tian_dd">
+<meta property="og:description" content="1.为什么要编码首先计算机是只识别0或者1的（字节），但是我们平时使用的都是字符（英文，中文，其他…）。所以，这期间就涉及到了字符与字节之间的转化过程。而这个过程（字节-&amp;gt;字符，字符-&amp;gt;字节）就是编码！
+2.常用的编码“工具”ASCII编码：是目前计算机中用得最广泛的字符集及其编码。使用指定的7 位或8 位二进制数组合来表示128 或256 种可能的字符。标准ASCII 码也叫基础AS">
+<meta property="og:updated_time" content="2015-06-25T05:52:10.414Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java 乱码总结">
+<meta name="twitter:description" content="1.为什么要编码首先计算机是只识别0或者1的（字节），但是我们平时使用的都是字符（英文，中文，其他…）。所以，这期间就涉及到了字符与字节之间的转化过程。而这个过程（字节-&amp;gt;字符，字符-&amp;gt;字节）就是编码！
+2.常用的编码“工具”ASCII编码：是目前计算机中用得最广泛的字符集及其编码。使用指定的7 位或8 位二进制数组合来表示128 或256 种可能的字符。标准ASCII 码也叫基础AS">
+  
+    <link rel="alternative" href="/atom.xml" title="Swust - Tian_dd" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  
+</head>
+<body>
+<div id="container">
+  <div id="wrap">
+    <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Swust - Tian_dd</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="http://www.baidu.com/baidu" method="get" accept-charset="utf-8" class="search-form">
+          <input type="search" name="word" maxlength="20" class="search-form-input" placeholder="Search">
+          <input type="submit" value="" class="search-form-submit">
+          <input name=tn type=hidden value="bds">
+          <input name=cl type=hidden value="3">
+          <input name=ct type=hidden value="2097152">
+          <input type="hidden" name="si" value="">
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+    <div class="outer">
+      <section id="main"><article id="post-Java 乱码总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/11/15/Java 乱码总结/" class="article-date">
+  <time datetime="2014-11-15T12:44:12.000Z" itemprop="datePublished">2014-11-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Java 乱码总结
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-为什么要编码">1.为什么要编码</h2><p>首先计算机是只识别0或者1的（字节），但是我们平时使用的都是字符（英文，中文，其他…）。所以，这期间就涉及到了字符与字节之间的转化过程。而这个过程（字节-&gt;字符，字符-&gt;字节）就是编码！</p>
+<h2 id="2-常用的编码“工具”">2.常用的编码“工具”</h2><p>ASCII编码：是目前计算机中用得最广泛的字符集及其编码。使用指定的7 位或8 位二进制数组合来表示128 或256 种可能的字符。标准ASCII 码也叫基础ASCII码，使用7 位二进制数来表示所有的大写和小写字母，数字0 到9、标点符号， 以及在美式英语中使用的特殊控制字符。</p>
+<p>ISO8859-1：可以表示的是西欧语言。看起来很单一为什么还在使用呢，由于是单字节编码，和计算机最基础的表示单位一致，所以很多时候，仍旧使用ISO-8859-1编码来表示。 而且在很多协议上，默认使用该编码。<br>GB2312：它是双字节编码，总的编码范围是A1~E7，其中A1~A9是符号区，总共包含682个符号；B0~F7是汉字区，包含6763个汉字。<br><a id="more"></a><br>GBK:GBK编码，是在GB2312-80标准基础上的内码扩展规范，使用了双字节编码方案，其编码范围从8140至FEFE（剔除xx7F），共23940个码位，共收录了21003个汉字，完全兼容GB2312-80标准，支持国际标准ISO/IEC10646-1和国家标准GB13000-1中的全部中日韩汉字，并包含了BIG5编码中的所有汉字。</p>
+<p>UTF-16:UTF-16是Unicode的其中一个使用方式。Unicode是java和xml的基础。UTF-16具体定义了Unicode的转化格式，它使用定长的表示方法，既不论什么字符都可以用两个字节来表示。两个字节就是16个bit，所以叫做UTF-16。UTF-16表示字符非常方便，每两个字节表示一个字符，这就大大简化了字符串的操作，这也是java以UTF-16作为内存的字符存储格式的很重要的原因。</p>
+<p>UTF-8：UTF-16统一采用两个字节来表示一个字符，虽然在表示上非常简单！方便！但是也有缺点。有很大一部分字符用一个字节就可以表示的，但是现在用两个字节表示，存储放大一倍！网络带宽有多利用了一倍。所以就有了UTF-8，它是一种变长的技术，每个编码区域有不同的字码长度。不同的字符可以有1~6个字节来组成。</p>
+<p>如果一个字节，最高位（第 8 位）为 0，表示这是一个 ASCII 字符（00 - 7F）。可见，所有 ASCII 编码已经是 UTF-8 了。<br>如果一个字节，以 11 开头，连续的 1 的个数暗示这个字符的字节数，例如：110xxxxx 代表它是双字节 UTF-8 字符的首字节。<br>如果一个字节，以 10 开始，表示它不是首字节，需要向前查找才能得到当前字符的首字节</p>
+<h2 id="3-java中编码">3.java中编码</h2><p>（1）IO流操作</p>
+<p>（2）内存操作</p>
+<p>（3）网络传输</p>
+<h2 id="4-编码测试">4.编码测试</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.UnsupportedEncodingException;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestEncode</span> </span>&#123;</span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> UnsupportedEncodingException </span>&#123;</span><br><span class="line">  String name = <span class="string">"田躲躲"</span>;</span><br><span class="line">  <span class="keyword">char</span> c[] = name.toCharArray();</span><br><span class="line">  <span class="keyword">byte</span>[] bs2 = <span class="keyword">new</span> <span class="keyword">byte</span>[c.length];<span class="comment">// 定义一个长度与需要转换的char数组相同的byte数组</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; c.length; i++) &#123;<span class="comment">// 循环将char数组的每一个元素转换为byte并存在上面定义的byte数组中</span></span><br><span class="line">   <span class="keyword">byte</span> b = (<span class="keyword">byte</span>) c[i];<span class="comment">// 将每一个char转换成byte</span></span><br><span class="line">   bs2[i] = b;<span class="comment">// 保存到数组中</span></span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println(<span class="string">"原始数据："</span>);</span><br><span class="line">  printHexString(bs2);</span><br><span class="line">  System.out.println();</span><br><span class="line">   </span><br><span class="line">  System.out.println(<span class="string">"ISO-8859-1:"</span>);</span><br><span class="line">  <span class="keyword">byte</span>[] iso8859 = name.getBytes(<span class="string">"ISO-8859-1"</span>);    </span><br><span class="line">  printHexString(iso8859); </span><br><span class="line">  System.out.println();</span><br><span class="line">   </span><br><span class="line">  System.out.println(<span class="string">"GBK:"</span>);</span><br><span class="line">  <span class="keyword">byte</span>[] gbk = name.getBytes(<span class="string">"GBK"</span>);    </span><br><span class="line">  printHexString(gbk);   </span><br><span class="line">  System.out.println();</span><br><span class="line">   </span><br><span class="line">  System.out.println(<span class="string">"GB2312:"</span>);</span><br><span class="line">  <span class="keyword">byte</span>[] gbk2312 = name.getBytes(<span class="string">"GB2312"</span>);    </span><br><span class="line">  printHexString(gbk2312);   </span><br><span class="line">  System.out.println();</span><br><span class="line">   </span><br><span class="line">  System.out.println(<span class="string">"UTF-16:"</span>);</span><br><span class="line">        <span class="keyword">byte</span>[] utf16 = name.getBytes(<span class="string">"UTF-16"</span>);    </span><br><span class="line">        printHexString(utf16);   </span><br><span class="line">        System.out.println();</span><br><span class="line">         </span><br><span class="line">        System.out.println(<span class="string">"UTF-8:"</span>);</span><br><span class="line">        <span class="keyword">byte</span>[] utf8 = name.getBytes(<span class="string">"UTF-8"</span>);    </span><br><span class="line">        printHexString(utf8);    </span><br><span class="line">   </span><br><span class="line"> &#125;</span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">bytes2HexString</span><span class="params">(<span class="keyword">byte</span>[] b)</span> </span>&#123;</span><br><span class="line">  String ret = <span class="string">""</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; b.length; i++) &#123;</span><br><span class="line">   String hex = Integer.toHexString(b[i] &amp; <span class="number">0xFF</span>);</span><br><span class="line">   <span class="keyword">if</span> (hex.length() == <span class="number">1</span>) &#123;</span><br><span class="line">    hex = <span class="string">'0'</span> + hex;</span><br><span class="line">   &#125;</span><br><span class="line">   ret += hex.toUpperCase();</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> ret;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">bytesToHexString</span><span class="params">(<span class="keyword">byte</span>[] src)</span> </span>&#123;</span><br><span class="line">  StringBuilder stringBuilder = <span class="keyword">new</span> StringBuilder(<span class="string">""</span>);  </span><br><span class="line">     <span class="keyword">if</span> (src == <span class="keyword">null</span> || src.length &lt;= <span class="number">0</span>) &#123;  </span><br><span class="line">         <span class="keyword">return</span> <span class="keyword">null</span>;  </span><br><span class="line">     &#125;  </span><br><span class="line">     <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; src.length; i++) &#123;  </span><br><span class="line">         <span class="keyword">int</span> v = src[i] &amp; <span class="number">0xFF</span>;  </span><br><span class="line">         String hv = Integer.toHexString(v);  </span><br><span class="line">         <span class="keyword">if</span> (hv.length() &lt; <span class="number">2</span>) &#123;  </span><br><span class="line">             stringBuilder.append(<span class="number">0</span>);  </span><br><span class="line">         &#125;  </span><br><span class="line">         stringBuilder.append(hv);  </span><br><span class="line">     &#125;  </span><br><span class="line">     <span class="keyword">return</span> stringBuilder.toString();  </span><br><span class="line"> &#125;</span><br><span class="line"> <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">byte</span> <span class="title">charToByte</span><span class="params">(<span class="keyword">char</span> c)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (<span class="keyword">byte</span>) <span class="string">"0123456789ABCDEF"</span>.indexOf(c);</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printHexString</span><span class="params">(<span class="keyword">byte</span>[] b)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; b.length; i++) &#123;</span><br><span class="line">   String hex = Integer.toHexString(b[i] &amp; <span class="number">0xFF</span>);</span><br><span class="line">   <span class="keyword">if</span> (hex.length() == <span class="number">1</span>) &#123;</span><br><span class="line">    hex = <span class="string">'0'</span> + hex;</span><br><span class="line">   &#125;</span><br><span class="line">    </span><br><span class="line">   System.out.print(hex.toUpperCase());</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">原始数据：</span><br><span class="line"><span class="number">30</span>B2B2</span><br><span class="line">ISO-<span class="number">8859</span>-<span class="number">1</span>:</span><br><span class="line"><span class="number">3F</span>3F3F</span><br><span class="line">GBK:</span><br><span class="line">CCEFB6E3B6E3</span><br><span class="line">GB2312:</span><br><span class="line">CCEFB6E3B6E3</span><br><span class="line">UTF-<span class="number">16</span>:</span><br><span class="line">FEFF75308EB28EB2</span><br><span class="line">UTF-<span class="number">8</span>:</span><br><span class="line">E794B0E8BAB2E8BAB2</span><br></pre></td></tr></table></figure>
+<p>通过比较可以知道：对中文字符后面四种编码格式都能处理，GB2312 与 GBK 编码规则类似，但是 GBK 范围更大，它能处理所有汉字字符，所以 GB2312 与 GBK 比较应该选择 GBK。UTF-16 与 UTF-8 都是处理 Unicode 编码，它们的编码规则不太相同，相对来说 UTF-16 编码效率最高，字符到字节相互转换更简单，进行字符串操作也更好。它适合在本地磁盘和内存之间使用，可以进行字符和字节之间快速切换，如 Java 的内存编码就是采用 UTF-16 编码。但是它不适合在网络之间传输，因为网络传输容易损坏字节流，一旦字节流损坏将很难恢复，想比较而言 UTF-8 更适合网络传输，对 ASCII 字符采用单字节存储，另外单个字符损坏也不会影响后面其它字符，在编码效率上介于 GBK 和 UTF-16 之间，所以 UTF-8 在编码效率上和编码安全性上做了平衡，是理想的中文编码方式。</p>
+<p> 5.乱码原因</p>
+<p>字符在保存时的编码格式如果和要显示的编码格式不一样的话，就会出现乱码问题。我们在做开发的时候，始终提倡开发环境编码一致。如页面编码，数据库编码等。<br>Java在运行期一律以Unicode来存储字符,这样有利的支持了多语言环境。我们在开发过程中经常会用到文件读取。Java读文件的时候会用到系统默认的编码来解码文件。所以在用FileInputStream类读取文件可以指定编码读取。<br>JSP页面乱码通常只要在页面开始地方用下面代码指定字符集编码即可。如果还不行，那么请用下面这句话来转换 str=new String(str.getBytes(“ISO-8859-1”),”页面编码方式”);<br>JAVA在网络传输中使用的编码是”ISO-8859-1”，故在输出时需要进行转化，如：<br>String str=new String(str.getBytes(“开发环境编码”),”ISO-8859-1”);<br>经过网络编码后的中文，要正确显示在页面上必须要用类似于<br>Stirng str=new String(str.getBytes(“ISO-8859-1”),”开发环境编码”);这样的方式来解码</p>
+<p>最后,为了避免不必要的java中文乱码，我们首先要从源头做起。<br>什么意思呢？这就是说，我们在项目开发中，首先要让我们开发环境统一编码。比如我用的开发环境是Eclipse+Tomcat5.0+SQLServer 2005。Eclipse的项目属性中可以设置项目的编码，可以针对JSP页面的设置统一的编码。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="/2014/11/15/Java 乱码总结/" data-id="cibbry2n50000p8o3kdjcjg8m" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+        <a href="/2014/11/15/Java 乱码总结/#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/11/21/模拟tomcat/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">
+        
+          模拟Tomcat
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/11/12/Mysql查询效率/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">Mysql 查询效率</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+  <section id="comments">
+    <div id="ds-thread" class="ds-thread" data-thread-key="2014/11/15/Java 乱码总结/" data-title="Java 乱码总结" data-url="/2014/11/15/Java 乱码总结/"></div>
+  </section>
+</section>
+      
+      <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Design-Pattern/">Design Pattern</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Entertainment/">Entertainment</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hadoop/">Hadoop</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Maven/">Maven</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mysql/">Mysql</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Oracle/">Oracle</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tomcat/">Tomcat</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/XML/">XML</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/go/">go</a><span class="category-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design-Pattern/">Design Pattern</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Entertainment/">Entertainment</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hadoop/">Hadoop</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hibernate/">Hibernate</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Https/">Https</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">16</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Json/">Json</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Maven/">Maven</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Memory/">Memory</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mongdb/">Mongdb</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/">Mysql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/">Oracle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Robomongo/">Robomongo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringMVC/">SpringMVC</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tomcat/">Tomcat</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XML/">XML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go/">go</a><span class="tag-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Design-Pattern/" style="font-size: 17.5px;">Design Pattern</a> <a href="/tags/Entertainment/" style="font-size: 10px;">Entertainment</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hadoop/" style="font-size: 15px;">Hadoop</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/Https/" style="font-size: 10px;">Https</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/Json/" style="font-size: 10px;">Json</a> <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/Maven/" style="font-size: 12.5px;">Maven</a> <a href="/tags/Memory/" style="font-size: 10px;">Memory</a> <a href="/tags/Mongdb/" style="font-size: 12.5px;">Mongdb</a> <a href="/tags/Mysql/" style="font-size: 12.5px;">Mysql</a> <a href="/tags/Oracle/" style="font-size: 10px;">Oracle</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Robomongo/" style="font-size: 10px;">Robomongo</a> <a href="/tags/Spring/" style="font-size: 10px;">Spring</a> <a href="/tags/SpringMVC/" style="font-size: 12.5px;">SpringMVC</a> <a href="/tags/Tomcat/" style="font-size: 10px;">Tomcat</a> <a href="/tags/XML/" style="font-size: 10px;">XML</a> <a href="/tags/go/" style="font-size: 12.5px;">go</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">9</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">近期文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/06/20/Linux命令/">Linux 用户3个命令小技巧</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/17/Django1.8+Python3.4+Mysql5.5/">Django1.8+Python3.4+Mysql5.5</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/15/Python爬虫/">Python爬虫</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/11/Python入门/">Python入门</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/09/go语言调用API实现分词/">go语言调用API实现分词</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">友情链接</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="http://weibo.com/3201776564/profile?topnav=1&wvr=6" target="_blank">新浪微博</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+      
+    </div>
+    <footer id="footer">
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Tian_dd<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      .
+      Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>
+    </div>
+	
+	<div>
+	
+	&nbsp;&nbsp;<font color="red" size="2px">Total Views:</font><span id="busuanzi_value_site_pv"></span><font color="red">.</font>
+    &nbsp;&nbsp;&nbsp;&nbsp;<font color="red" size="2px">您是第</font><span id="busuanzi_value_site_uv"></span><font color="red" size="2px">个访客.</font>
+
+	</div>
+  </div>
+  
+</footer>
+
+
+  </div>
+  <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+  <!-- totop start -->
+<div id="totop">
+<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+</div>
+
+<!-- totop end -->
+
+<!-- 多说公共js代码 start -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"tian-dd"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共js代码 end -->
+
+
+<!-- 百度分享 start -->
+
+<div id="article-share-box" class="article-share-box">
+  <div id="bdshare" class="bdsharebuttonbox article-share-links">
+    <a class="article-share-weibo" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a class="article-share-weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a class="article-share-qq" data-cmd="sqq" title="分享到QQ"></a>
+    <a class="article-share-renren" data-cmd="renren" title="分享到人人网"></a>
+    <a class="article-share-more" data-cmd="more" title="更多"></a>
+  </div>
+</div>
+<script>window._bd_share_config={"common":{},"share":{"bdCustomStyle":"/css/bdshare.css"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<!-- 百度分享 end -->
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+</div>
+</body>
+</html>

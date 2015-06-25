@@ -71,14 +71,14 @@
     <div class="outer">
       <section id="main">
   
-    <article id="post-堆和栈" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Linux命令" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2014/10/24/堆和栈/" class="article-date">
-  <time datetime="2014-10-24T12:44:12.000Z" itemprop="datePublished">2014-10-24</time>
+    <a href="/2015/06/20/Linux命令/" class="article-date">
+  <time datetime="2015-06-20T12:44:12.000Z" itemprop="datePublished">2015-06-20</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Java/">Java</a>
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
   </div>
 
   </div>
@@ -89,7 +89,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2014/10/24/堆和栈/">堆和栈</a>
+      <a class="article-title" href="/2015/06/20/Linux命令/">Linux 用户3个命令小技巧</a>
     </h1>
   
 
@@ -97,27 +97,28 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="什么是堆和栈，它们在哪儿？">什么是堆和栈，它们在哪儿？</h2><pre><code>问题描述
-编程语言书籍中经常解释值类型被创建在栈上，引用类型被创建在堆上，但是并没有本质上解释这堆和栈是什么。
-</code></pre><p>我仅有高级语言编程经验，没有看过对此更清晰的解释。我的意思是我理解什么是栈，但是它们到底是什么，在哪儿呢（站在实际的计算机物理内存的角度上看）？<br><br>在通常情况下由操作系统（OS）和语言的运行时（runtime）控制吗？<br><br>它们的作用范围是什么？<br><br>它们的大小由什么决定？<br><br>哪个更快？<br><br>答案一<br><br>栈是为执行线程留出的内存空间。当函数被调用的时候，栈顶为局部变量和一些 bookkeeping数据预留块。当函数执行完毕，块就没有用了，可能在下次的函数调用的时候再被使用。栈通常用后进先出（LIFO）的方式预留空间；因此最近的保留块（reserved block）通常最先被释放。这么做可以使跟踪堆栈变的简单；从栈中释放块（free block）只不过是指针的偏移而已。<br><br>堆（heap）是为动态分配预留的内存空间。和栈不一样，从堆上分配和重新分配块没有固定模式；你可以在任何时候分配和释放它。这样使得跟踪哪部分堆已经被分配和被释放变的异常复杂；有许多定制的堆分配策略用来为不同的使用模式下调整堆的性能。<br><br>每一个线程都有一个栈，但是每一个应用程序通常都只有一个堆（尽管为不同类型分配内存使用多个堆的情况也是有的）。<br><br>直接回答你的问题<br><br>
+        <p><em>转自：<a href="http://www.jianshu.com/p/4419e114881a">http://www.jianshu.com/p/4419e114881a</a></em></p>
+<p>Linux世界充满了乐趣，我们越深入进去，就会发现越多有趣的事物。我们会努力给你提供一些小技巧，让你和其他人有所不同，下面就是我们准备的3个小技巧。</p>
+<h2 id="1-_如何在不使用Cron的情况调度Linux下的任务">1. 如何在不使用Cron的情况调度Linux下的任务</h2><p>在Linux下，调度一个任务/命令称之为Cron。当我们需要调度一个任务时，我们会使用Cron，但你知道我们在不使用Cron的情况也可以调度一个在将来时间运行的任务吗？你可以按照如下建议操作……</p>
+<p>每5秒钟运行一个命令（date）然后将结果写入到一个文件（data.txt）。为了实现这一点，我们可以直接在命令提示符运行如下单行脚本。<br>
         
           <p class="article-more-link">
-            <a href="/2014/10/24/堆和栈/#more">Read More</a>
+            <a href="/2015/06/20/Linux命令/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="/2014/10/24/堆和栈/" data-id="cibboiqf90006b8o3cb1cijlp" class="article-share-link" data-share="baidu">分享到</a>
+        <a data-url="/2015/06/20/Linux命令/" data-id="cibbu2596000cyco3wt48apuk" class="article-share-link" data-share="baidu">分享到</a>
       
 
       
-        <a href="/2014/10/24/堆和栈/#ds-thread" class="article-comment-link">評論</a>
+        <a href="/2015/06/20/Linux命令/#ds-thread" class="article-comment-link">评论</a>
       
 
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Memory/">Memory</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
 
     </footer>
   </div>
@@ -126,14 +127,14 @@
 
 
   
-    <article id="post-java异常" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Django1.8+Python3.4+Mysql5.5" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2014/10/23/java异常/" class="article-date">
-  <time datetime="2014-10-23T12:44:12.000Z" itemprop="datePublished">2014-10-23</time>
+    <a href="/2015/06/17/Django1.8+Python3.4+Mysql5.5/" class="article-date">
+  <time datetime="2015-06-17T12:44:12.000Z" itemprop="datePublished">2015-06-17</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Java/">Java</a>
+    <a class="article-category-link" href="/categories/Python/">Python</a>
   </div>
 
   </div>
@@ -144,7 +145,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2014/10/23/java异常/">Java异常</a>
+      <a class="article-title" href="/2015/06/17/Django1.8+Python3.4+Mysql5.5/">Django1.8+Python3.4+Mysql5.5</a>
     </h1>
   
 
@@ -152,26 +153,29 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="(01)_运行时异常">(01) 运行时异常</h2><p>定义: RuntimeException及其子类都被称为运行时异常。<br>特点: Java编译器不会检查它。也就是说，当程序中可能出现这类异常时，倘若既”没有通过throws声明抛出它”，也”没有用try-catch语句捕获它”，还是会编译通过。例如，除数为零时产生的ArithmeticException异常，数组越界时产生的IndexOutOfBoundsException异常，fail-fail机制产生的ConcurrentModificationException异常等，都属于运行时异常。<br>　　虽然Java编译器不会检查运行时异常，但是我们也可以通过throws进行声明抛出，也可以通过try-catch对它进行捕获处理。<br>　　如果产生运行时异常，则需要通过修改代码来进行避免。例如，若会发生除数为零的情况，则需要通过代码避免该情况的发生！</p>
-<h2 id="(02)_被检查的异常">(02) 被检查的异常</h2><p>定义: Exception类本身，以及Exception的子类中除了”运行时异常”之外的其它子类都属于被检查异常。<br>特点: Java编译器会检查它。此类异常，要么通过throws进行声明抛出，要么通过try-catch进行捕获处理，否则不能通过编译。例如，CloneNotSupportedException就属于被检查异常。当通过clone()接口去克隆一个对象，而该对象对应的类没有实现Cloneable接口，就会抛出CloneNotSupportedException异常。<br>　　被检查异常通常都是可以恢复的。<br>
+        <p>1、开发环境</p>
+<font color="red">系统：</font>
+
+<p><img src="http://static.oschina.net/uploads/space/2015/0617/192235_lxVE_1863482.png" alt="ui-demo"></p>
+<font color="red">数据库：</font><br>
         
           <p class="article-more-link">
-            <a href="/2014/10/23/java异常/#more">Read More</a>
+            <a href="/2015/06/17/Django1.8+Python3.4+Mysql5.5/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="/2014/10/23/java异常/" data-id="cibboiqfe000bb8o3c3hv9jq9" class="article-share-link" data-share="baidu">分享到</a>
+        <a data-url="/2015/06/17/Django1.8+Python3.4+Mysql5.5/" data-id="cibbu255s0000yco3utj8yo86" class="article-share-link" data-share="baidu">分享到</a>
       
 
       
-        <a href="/2014/10/23/java异常/#ds-thread" class="article-comment-link">評論</a>
+        <a href="/2015/06/17/Django1.8+Python3.4+Mysql5.5/#ds-thread" class="article-comment-link">评论</a>
       
 
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mysql/">Mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
 
     </footer>
   </div>
@@ -180,14 +184,14 @@
 
 
   
-    <article id="post-Java动态代理框架" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Python爬虫" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2014/10/23/Java动态代理框架/" class="article-date">
-  <time datetime="2014-10-23T10:44:12.000Z" itemprop="datePublished">2014-10-23</time>
+    <a href="/2015/06/15/Python爬虫/" class="article-date">
+  <time datetime="2015-06-15T12:44:12.000Z" itemprop="datePublished">2015-06-15</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Java/">Java</a>
+    <a class="article-category-link" href="/categories/Python/">Python</a>
   </div>
 
   </div>
@@ -198,7 +202,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2014/10/23/Java动态代理框架/">Java动态代理框架</a>
+      <a class="article-title" href="/2015/06/15/Python爬虫/">Python爬虫</a>
     </h1>
   
 
@@ -206,26 +210,26 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="这是动态代理框架的一个基本流程图">这是动态代理框架的一个基本流程图</h2><p><img src="https://github.com/1011641270/blog/blob/gh-pages/images/007.jpg?raw=true" alt="001"></p>
-<h2 id="代码：">代码：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">	DynamicProxyInvocationHandler</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> Object object;</span><br><span class="line"> <span class="keyword">private</span> AOPInterceptor aopInterceptor;</span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="title">DynamicProxyInvocationHandler</span><span class="params">(Object object,</span><br><span class="line">   AOPInterceptor aopInterceptor)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">super</span>();</span><br><span class="line">  <span class="keyword">this</span>.object = object;</span><br><span class="line">  <span class="keyword">this</span>.aopInterceptor = aopInterceptor;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="comment">/**</span><br><span class="line">  * 在try中没有异常的情况下try、catch、finally的执行顺序 try --- finally</span><br><span class="line">          如果try中有异常，执行顺序是try --- catch --- finally</span><br><span class="line">                     如果try中没有异常并且try中有return这时候正常执行顺序是try ---- finally --- return</span><br><span class="line">                     如果try中有异常并且try中有return这时候正常执行顺序是try----catch---finally--- return</span><br><span class="line">                     总之 finally 永远执行！</span><br><span class="line">  */</span></span><br><span class="line"></span><br><span class="line"> <span class="annotation">@Override</span></span><br><span class="line"> <span class="function"><span class="keyword">public</span> Object <span class="title">invoke</span><span class="params">(Object proxy, Method method, Object[] args)</span></span><br><span class="line">   <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">  <span class="comment">// <span class="doctag"><span class="keyword">TODO</span></span> Auto-generated method stub</span></span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line"></span><br><span class="line">   aopInterceptor.before(method, args);</span><br><span class="line">   Object returnValue = method.invoke(object, args);</span><br><span class="line">   aopInterceptor.after(method, args);</span><br><span class="line">   <span class="keyword">return</span> returnValue;</span><br><span class="line"></span><br><span class="line">  &#125; <span class="keyword">catch</span> (Throwable t) &#123;</span><br><span class="line">   <span class="comment">// <span class="doctag"><span class="keyword">TODO</span></span>: handle exception</span></span><br><span class="line">      aopInterceptor.afterThrowing(method, args, t);</span><br><span class="line">      <span class="keyword">throw</span> t;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">finally</span>&#123;</span><br><span class="line">   aopInterceptor.afterFinally(method, args);</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="1、安装requests，BeautifulSoup">1、安装requests，BeautifulSoup</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo pip3 install requests</span><br><span class="line">sudo pip3 install beautifulsoup4</span><br></pre></td></tr></table></figure>
+<h2 id="2、简单代码演示">2、简单代码演示</h2>
         
           <p class="article-more-link">
-            <a href="/2014/10/23/Java动态代理框架/#more">Read More</a>
+            <a href="/2015/06/15/Python爬虫/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="/2014/10/23/Java动态代理框架/" data-id="cibboiqe80000b8o3injjdyvb" class="article-share-link" data-share="baidu">分享到</a>
+        <a data-url="/2015/06/15/Python爬虫/" data-id="cibbu258d0006yco37j3dd2v7" class="article-share-link" data-share="baidu">分享到</a>
       
 
       
-        <a href="/2014/10/23/Java动态代理框架/#ds-thread" class="article-comment-link">評論</a>
+        <a href="/2015/06/15/Python爬虫/#ds-thread" class="article-comment-link">评论</a>
       
 
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
 
     </footer>
   </div>
@@ -234,6 +238,385 @@
 
 
   
+    <article id="post-Python入门" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/06/11/Python入门/" class="article-date">
+  <time datetime="2015-06-11T12:44:12.000Z" itemprop="datePublished">2015-06-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/06/11/Python入门/">Python入门</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1、python环境配置">1、python环境配置</h2><p> 我用的是ubuntu14.04，它自带了python2.7.6和python3.4.0版本。安装pythonIDE，推荐PyCharm(<a href="https://www.jetbrains.com/pycharm">https://www.jetbrains.com/pycharm</a>)</p>
+<p> <img src="http://static.oschina.net/uploads/space/2015/0611/115157_GoNI_1863482.png" alt="ui-demo"></p>
+<h2 id="2、python命名规范">2、python命名规范</h2>
+        
+          <p class="article-more-link">
+            <a href="/2015/06/11/Python入门/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="/2015/06/11/Python入门/" data-id="cibbu258l0009yco35ti1zqf8" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+        <a href="/2015/06/11/Python入门/#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-go语言调用API实现分词" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/06/09/go语言调用API实现分词/" class="article-date">
+  <time datetime="2015-06-09T12:44:12.000Z" itemprop="datePublished">2015-06-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/go/">go</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/06/09/go语言调用API实现分词/">go语言调用API实现分词</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1、确保已经安装go语言">1、确保已经安装go语言</h2><p><img src="http://static.oschina.net/uploads/space/2015/0609/212202_4MD2_1863482.png" alt="ui-demo"><br>
+        
+          <p class="article-more-link">
+            <a href="/2015/06/09/go语言调用API实现分词/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="/2015/06/09/go语言调用API实现分词/" data-id="cibbttodl00062so32452p5h6" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+        <a href="/2015/06/09/go语言调用API实现分词/#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/go/">go</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Hadoop整合Mongdb" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/05/28/Hadoop整合Mongdb/" class="article-date">
+  <time datetime="2015-05-28T12:44:12.000Z" itemprop="datePublished">2015-05-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Hadoop/">Hadoop</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/05/28/Hadoop整合Mongdb/">Hadoop整合Mongdb</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1、确保已经安装了mongdb">1、确保已经安装了mongdb</h2><p><img src="http://static.oschina.net/uploads/space/2015/0528/220943_Ma0w_1863482.png" alt="ui-demo"><br>
+        
+          <p class="article-more-link">
+            <a href="/2015/05/28/Hadoop整合Mongdb/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="/2015/05/28/Hadoop整合Mongdb/" data-id="cibbtto9r00002so3ca4btwpp" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+        <a href="/2015/05/28/Hadoop整合Mongdb/#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hadoop/">Hadoop</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mongdb/">Mongdb</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Ubuntu安装Mongdb" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/05/27/Ubuntu安装Mongdb/" class="article-date">
+  <time datetime="2015-05-27T12:44:12.000Z" itemprop="datePublished">2015-05-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/05/27/Ubuntu安装Mongdb/">Ubuntu安装Mongdb,Robomongo</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1、安装Mongdb">1、安装Mongdb</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>.sudo apt-key adv --keyserver hkp:<span class="comment">//keyserver.ubuntu.com:80 --recv 7F0CEB10</span></span><br><span class="line"><span class="number">2</span>.sudo apt-get update</span><br><span class="line"><span class="number">3</span>.sudo apt-get install -y mongodb-org</span><br></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a href="/2015/05/27/Ubuntu安装Mongdb/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="/2015/05/27/Ubuntu安装Mongdb/" data-id="cibbttoe2000f2so3q4y4u1mh" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+        <a href="/2015/05/27/Ubuntu安装Mongdb/#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mongdb/">Mongdb</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Robomongo/">Robomongo</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Ubuntu编写go语言" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/05/25/Ubuntu编写go语言/" class="article-date">
+  <time datetime="2015-05-25T12:44:12.000Z" itemprop="datePublished">2015-05-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/go/">go</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/05/25/Ubuntu编写go语言/">Ubuntu编写go语言</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、下载配置Golang,配置相关环境</p>
+<p>一、现在地址：<a href="http://www.golangtc.com/download">http://www.golangtc.com/download</a>我选择的是下面这个（64位，linux版）</p>
+<p><img src="https://github.com/1011641270/blog/blob/gh-pages/images/059.png?raw=true" alt="ui-demo"><br>
+        
+          <p class="article-more-link">
+            <a href="/2015/05/25/Ubuntu编写go语言/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="/2015/05/25/Ubuntu编写go语言/" data-id="cibbttodu000b2so30nwewzps" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+        <a href="/2015/05/25/Ubuntu编写go语言/#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/go/">go</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-MapReduce应用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/05/21/MapReduce应用/" class="article-date">
+  <time datetime="2015-05-21T12:44:12.000Z" itemprop="datePublished">2015-05-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Hadoop/">Hadoop</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/05/21/MapReduce应用/">MapReduce应用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、MapReduce实现矩阵相乘</p>
+        
+          <p class="article-more-link">
+            <a href="/2015/05/21/MapReduce应用/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="/2015/05/21/MapReduce应用/" data-id="cibbttoee000l2so3vw9xzjzx" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+        <a href="/2015/05/21/MapReduce应用/#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hadoop/">Hadoop</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-最全Maven配置文件" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/05/19/最全Maven配置文件/" class="article-date">
+  <time datetime="2015-05-19T12:44:12.000Z" itemprop="datePublished">2015-05-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Maven/">Maven</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/05/19/最全Maven配置文件/">最全Maven配置文件</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最全Maven配置文件,总有你想用到的。。<br>
+        
+          <p class="article-more-link">
+            <a href="/2015/05/19/最全Maven配置文件/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="/2015/05/19/最全Maven配置文件/" data-id="cibbsul9m0007wso3wkk2b5wd" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+        <a href="/2015/05/19/最全Maven配置文件/#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Maven/">Maven</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </section>
       
@@ -241,36 +624,36 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">分類</h3>
+    <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Design-Pattern/">Design Pattern</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Entertainment/">Entertainment</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hadoop/">Hadoop</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Maven/">Maven</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mysql/">Mysql</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Oracle/">Oracle</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tomcat/">Tomcat</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/XML/">XML</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/go/">go</a><span class="category-list-count">2</span></li></ul>
     </div>
   </div>
 
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">標簽</h3>
+    <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Memory/">Memory</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design-Pattern/">Design Pattern</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Entertainment/">Entertainment</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hadoop/">Hadoop</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hibernate/">Hibernate</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Https/">Https</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">16</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Json/">Json</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Maven/">Maven</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Memory/">Memory</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mongdb/">Mongdb</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/">Mysql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/">Oracle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Robomongo/">Robomongo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringMVC/">SpringMVC</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tomcat/">Tomcat</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XML/">XML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go/">go</a><span class="tag-list-count">2</span></li></ul>
     </div>
   </div>
 
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">標簽雲</h3>
+    <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/Memory/" style="font-size: 10px;">Memory</a>
+      <a href="/tags/Design-Pattern/" style="font-size: 17.5px;">Design Pattern</a> <a href="/tags/Entertainment/" style="font-size: 10px;">Entertainment</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hadoop/" style="font-size: 15px;">Hadoop</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/Https/" style="font-size: 10px;">Https</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/Json/" style="font-size: 10px;">Json</a> <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/Maven/" style="font-size: 12.5px;">Maven</a> <a href="/tags/Memory/" style="font-size: 10px;">Memory</a> <a href="/tags/Mongdb/" style="font-size: 12.5px;">Mongdb</a> <a href="/tags/Mysql/" style="font-size: 12.5px;">Mysql</a> <a href="/tags/Oracle/" style="font-size: 10px;">Oracle</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Robomongo/" style="font-size: 10px;">Robomongo</a> <a href="/tags/Spring/" style="font-size: 10px;">Spring</a> <a href="/tags/SpringMVC/" style="font-size: 12.5px;">SpringMVC</a> <a href="/tags/Tomcat/" style="font-size: 10px;">Tomcat</a> <a href="/tags/XML/" style="font-size: 10px;">XML</a> <a href="/tags/go/" style="font-size: 12.5px;">go</a>
     </div>
   </div>
 
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">歸檔</h3>
+    <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">9</span></li></ul>
     </div>
   </div>
 
@@ -282,15 +665,23 @@
       <ul>
         
           <li>
-            <a href="/2014/10/24/堆和栈/">堆和栈</a>
+            <a href="/2015/06/20/Linux命令/">Linux 用户3个命令小技巧</a>
           </li>
         
           <li>
-            <a href="/2014/10/23/java异常/">Java异常</a>
+            <a href="/2015/06/17/Django1.8+Python3.4+Mysql5.5/">Django1.8+Python3.4+Mysql5.5</a>
           </li>
         
           <li>
-            <a href="/2014/10/23/Java动态代理框架/">Java动态代理框架</a>
+            <a href="/2015/06/15/Python爬虫/">Python爬虫</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/11/Python入门/">Python入门</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/09/go语言调用API实现分词/">go语言调用API实现分词</a>
           </li>
         
       </ul>
@@ -300,7 +691,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">友情鏈接</h3>
+    <h3 class="widget-title">友情链接</h3>
     <div class="widget">
       <ul>
         
@@ -352,7 +743,7 @@
 </nav>
   <!-- totop start -->
 <div id="totop">
-<a title="返回頂部"><img src="/img/scrollup.png"/></a>
+<a title="返回顶部"><img src="/img/scrollup.png"/></a>
 </div>
 
 <!-- totop end -->

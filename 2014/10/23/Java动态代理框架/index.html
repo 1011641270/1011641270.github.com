@@ -7,19 +7,19 @@
   <title>Java动态代理框架 | Swust - Tian_dd</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="这是动态代理框架的一个基本流程图
-代码：1234567891011121314151617181920212223242526272829303132333435363738	DynamicProxyInvocationHandlerprivate Object object; private AOPInterceptor aopInterceptor; public DynamicProxyIn">
+代码：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java动态代理框架">
 <meta property="og:url" content="/2014/10/23/Java动态代理框架/index.html">
 <meta property="og:site_name" content="Swust - Tian_dd">
 <meta property="og:description" content="这是动态代理框架的一个基本流程图
-代码：1234567891011121314151617181920212223242526272829303132333435363738	DynamicProxyInvocationHandlerprivate Object object; private AOPInterceptor aopInterceptor; public DynamicProxyIn">
+代码：">
 <meta property="og:image" content="https://github.com/1011641270/blog/blob/gh-pages/images/007.jpg?raw=true">
-<meta property="og:updated_time" content="2015-06-25T04:19:45.208Z">
+<meta property="og:updated_time" content="2015-06-25T05:32:59.783Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java动态代理框架">
 <meta name="twitter:description" content="这是动态代理框架的一个基本流程图
-代码：1234567891011121314151617181920212223242526272829303132333435363738	DynamicProxyInvocationHandlerprivate Object object; private AOPInterceptor aopInterceptor; public DynamicProxyIn">
+代码：">
   
     <link rel="alternative" href="/atom.xml" title="Swust - Tian_dd" type="application/atom+xml">
   
@@ -101,8 +101,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="这是动态代理框架的一个基本流程图">这是动态代理框架的一个基本流程图</h2><p><img src="https://github.com/1011641270/blog/blob/gh-pages/images/007.jpg?raw=true" alt="001"></p>
-<h2 id="代码：">代码：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">	DynamicProxyInvocationHandler</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> Object object;</span><br><span class="line"> <span class="keyword">private</span> AOPInterceptor aopInterceptor;</span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="title">DynamicProxyInvocationHandler</span><span class="params">(Object object,</span><br><span class="line">   AOPInterceptor aopInterceptor)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">super</span>();</span><br><span class="line">  <span class="keyword">this</span>.object = object;</span><br><span class="line">  <span class="keyword">this</span>.aopInterceptor = aopInterceptor;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="comment">/**</span><br><span class="line">  * 在try中没有异常的情况下try、catch、finally的执行顺序 try --- finally</span><br><span class="line">          如果try中有异常，执行顺序是try --- catch --- finally</span><br><span class="line">                     如果try中没有异常并且try中有return这时候正常执行顺序是try ---- finally --- return</span><br><span class="line">                     如果try中有异常并且try中有return这时候正常执行顺序是try----catch---finally--- return</span><br><span class="line">                     总之 finally 永远执行！</span><br><span class="line">  */</span></span><br><span class="line"></span><br><span class="line"> <span class="annotation">@Override</span></span><br><span class="line"> <span class="function"><span class="keyword">public</span> Object <span class="title">invoke</span><span class="params">(Object proxy, Method method, Object[] args)</span></span><br><span class="line">   <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">  <span class="comment">// <span class="doctag"><span class="keyword">TODO</span></span> Auto-generated method stub</span></span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line"></span><br><span class="line">   aopInterceptor.before(method, args);</span><br><span class="line">   Object returnValue = method.invoke(object, args);</span><br><span class="line">   aopInterceptor.after(method, args);</span><br><span class="line">   <span class="keyword">return</span> returnValue;</span><br><span class="line"></span><br><span class="line">  &#125; <span class="keyword">catch</span> (Throwable t) &#123;</span><br><span class="line">   <span class="comment">// <span class="doctag"><span class="keyword">TODO</span></span>: handle exception</span></span><br><span class="line">      aopInterceptor.afterThrowing(method, args, t);</span><br><span class="line">      <span class="keyword">throw</span> t;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">finally</span>&#123;</span><br><span class="line">   aopInterceptor.afterFinally(method, args);</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
+<h2 id="代码：">代码：</h2><a id="more"></a>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">	DynamicProxyInvocationHandler</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> Object object;</span><br><span class="line"> <span class="keyword">private</span> AOPInterceptor aopInterceptor;</span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="title">DynamicProxyInvocationHandler</span><span class="params">(Object object,</span><br><span class="line">   AOPInterceptor aopInterceptor)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">super</span>();</span><br><span class="line">  <span class="keyword">this</span>.object = object;</span><br><span class="line">  <span class="keyword">this</span>.aopInterceptor = aopInterceptor;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="comment">/**</span><br><span class="line">  * 在try中没有异常的情况下try、catch、finally的执行顺序 try --- finally</span><br><span class="line">          如果try中有异常，执行顺序是try --- catch --- finally</span><br><span class="line">                     如果try中没有异常并且try中有return这时候正常执行顺序是try ---- finally --- return</span><br><span class="line">                     如果try中有异常并且try中有return这时候正常执行顺序是try----catch---finally--- return</span><br><span class="line">                     总之 finally 永远执行！</span><br><span class="line">  */</span></span><br><span class="line"></span><br><span class="line"> <span class="annotation">@Override</span></span><br><span class="line"> <span class="function"><span class="keyword">public</span> Object <span class="title">invoke</span><span class="params">(Object proxy, Method method, Object[] args)</span></span><br><span class="line">   <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">  <span class="comment">// <span class="doctag"><span class="keyword">TODO</span></span> Auto-generated method stub</span></span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line"></span><br><span class="line">   aopInterceptor.before(method, args);</span><br><span class="line">   Object returnValue = method.invoke(object, args);</span><br><span class="line">   aopInterceptor.after(method, args);</span><br><span class="line">   <span class="keyword">return</span> returnValue;</span><br><span class="line"></span><br><span class="line">  &#125; <span class="keyword">catch</span> (Throwable t) &#123;</span><br><span class="line">   <span class="comment">// <span class="doctag"><span class="keyword">TODO</span></span>: handle exception</span></span><br><span class="line">      aopInterceptor.afterThrowing(method, args, t);</span><br><span class="line">      <span class="keyword">throw</span> t;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">finally</span>&#123;</span><br><span class="line">   aopInterceptor.afterFinally(method, args);</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<!--more-->
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">AOPInterceptor</span><br><span class="line"></span><br><span class="line"> <span class="keyword">void</span> <span class="title">before</span> <span class="params">(Method method,Object[] args)</span></span>;</span><br><span class="line"> <span class="function"><span class="keyword">void</span> <span class="title">after</span><span class="params">(Method method,Object[] args)</span></span>;</span><br><span class="line"> <span class="function"><span class="keyword">void</span> <span class="title">afterThrowing</span><span class="params">(Method method,Object[] args,Throwable throwable)</span></span>;</span><br><span class="line"> <span class="function"><span class="keyword">void</span> <span class="title">afterFinally</span><span class="params">(Method method,Object[] args)</span></span>;</span><br></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DynamicProxyFactory</span><br><span class="line">&lt;T&gt; <span class="function">T <span class="title">createProxy</span><span class="params">(Class&lt;T&gt; clazz,T target,AOPInterceptor interceptor)</span></span>;</span><br></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">DynamicProxyFactoryImpl</span><br><span class="line"></span><br><span class="line"><span class="annotation">@SuppressWarnings</span>(<span class="string">"unchecked"</span>)</span><br><span class="line"> <span class="annotation">@Override</span></span><br><span class="line"> <span class="keyword">public</span> &lt;T&gt; <span class="function">T <span class="title">createProxy</span><span class="params">(Class&lt;T&gt; clazz, T target,</span><br><span class="line">   AOPInterceptor interceptor)</span> </span>&#123;</span><br><span class="line">  <span class="comment">// <span class="doctag"><span class="keyword">TODO</span></span> Auto-generated method stub</span></span><br><span class="line"> InvocationHandler handler = <span class="keyword">new</span> DynamicProxyInvocationHandler(target, interceptor);</span><br><span class="line"> <span class="keyword">return</span> (T)Proxy.newProxyInstance(Thread.currentThread().getContextClassLoader(), <span class="keyword">new</span> Class&lt;?&gt;[] &#123;clazz&#125;, handler);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
@@ -119,11 +120,11 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="/2014/10/23/Java动态代理框架/" data-id="cibboiqe80000b8o3injjdyvb" class="article-share-link" data-share="baidu">分享到</a>
+        <a data-url="/2014/10/23/Java动态代理框架/" data-id="cibbowdza00007ko3ukn2n3uq" class="article-share-link" data-share="baidu">分享到</a>
       
 
       
-        <a href="/2014/10/23/Java动态代理框架/#ds-thread" class="article-comment-link">評論</a>
+        <a href="/2014/10/23/Java动态代理框架/#ds-thread" class="article-comment-link">评论</a>
       
 
       
@@ -160,36 +161,36 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">分類</h3>
+    <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Design-Pattern/">Design Pattern</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Entertainment/">Entertainment</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hadoop/">Hadoop</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Maven/">Maven</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mysql/">Mysql</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Oracle/">Oracle</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tomcat/">Tomcat</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/XML/">XML</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/go/">go</a><span class="category-list-count">2</span></li></ul>
     </div>
   </div>
 
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">標簽</h3>
+    <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Memory/">Memory</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design-Pattern/">Design Pattern</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Entertainment/">Entertainment</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hadoop/">Hadoop</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hibernate/">Hibernate</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Https/">Https</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">16</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Json/">Json</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Maven/">Maven</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Memory/">Memory</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mongdb/">Mongdb</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/">Mysql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/">Oracle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Robomongo/">Robomongo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringMVC/">SpringMVC</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tomcat/">Tomcat</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XML/">XML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go/">go</a><span class="tag-list-count">2</span></li></ul>
     </div>
   </div>
 
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">標簽雲</h3>
+    <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/Memory/" style="font-size: 10px;">Memory</a>
+      <a href="/tags/Design-Pattern/" style="font-size: 17.5px;">Design Pattern</a> <a href="/tags/Entertainment/" style="font-size: 10px;">Entertainment</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hadoop/" style="font-size: 15px;">Hadoop</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/Https/" style="font-size: 10px;">Https</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/Json/" style="font-size: 10px;">Json</a> <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/Maven/" style="font-size: 12.5px;">Maven</a> <a href="/tags/Memory/" style="font-size: 10px;">Memory</a> <a href="/tags/Mongdb/" style="font-size: 12.5px;">Mongdb</a> <a href="/tags/Mysql/" style="font-size: 12.5px;">Mysql</a> <a href="/tags/Oracle/" style="font-size: 10px;">Oracle</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Robomongo/" style="font-size: 10px;">Robomongo</a> <a href="/tags/Spring/" style="font-size: 10px;">Spring</a> <a href="/tags/SpringMVC/" style="font-size: 12.5px;">SpringMVC</a> <a href="/tags/Tomcat/" style="font-size: 10px;">Tomcat</a> <a href="/tags/XML/" style="font-size: 10px;">XML</a> <a href="/tags/go/" style="font-size: 12.5px;">go</a>
     </div>
   </div>
 
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">歸檔</h3>
+    <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">9</span></li></ul>
     </div>
   </div>
 
@@ -201,15 +202,23 @@
       <ul>
         
           <li>
-            <a href="/2014/10/24/堆和栈/">堆和栈</a>
+            <a href="/2015/06/20/Linux命令/">Linux 用户3个命令小技巧</a>
           </li>
         
           <li>
-            <a href="/2014/10/23/java异常/">Java异常</a>
+            <a href="/2015/06/17/Django1.8+Python3.4+Mysql5.5/">Django1.8+Python3.4+Mysql5.5</a>
           </li>
         
           <li>
-            <a href="/2014/10/23/Java动态代理框架/">Java动态代理框架</a>
+            <a href="/2015/06/15/Python爬虫/">Python爬虫</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/11/Python入门/">Python入门</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/09/go语言调用API实现分词/">go语言调用API实现分词</a>
           </li>
         
       </ul>
@@ -219,7 +228,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">友情鏈接</h3>
+    <h3 class="widget-title">友情链接</h3>
     <div class="widget">
       <ul>
         
@@ -271,7 +280,7 @@
 </nav>
   <!-- totop start -->
 <div id="totop">
-<a title="返回頂部"><img src="/img/scrollup.png"/></a>
+<a title="返回顶部"><img src="/img/scrollup.png"/></a>
 </div>
 
 <!-- totop end -->

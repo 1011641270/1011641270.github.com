@@ -1,0 +1,347 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Servlet学习 | Swust - Tian_dd</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Servlet
+1 概念
+Servlet技术是Sun公司提供的一种实现动态网页的解决方案，它是基于Java编程语言的WEB服务器端编程技术。一个Servlet程序就是一个实现了特殊接口的 Java类，它由支持Servlet（具有Servlet引擎）的WEB服务器调用和启动运行。一个Servlet程序负责处理它所对应的一个或一组URL地址的访问请求，并接收客户端发出的访问请求信息和产生响应内容。
+2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Servlet学习">
+<meta property="og:url" content="/2014/11/27/Servlet学习/index.html">
+<meta property="og:site_name" content="Swust - Tian_dd">
+<meta property="og:description" content="Servlet
+1 概念
+Servlet技术是Sun公司提供的一种实现动态网页的解决方案，它是基于Java编程语言的WEB服务器端编程技术。一个Servlet程序就是一个实现了特殊接口的 Java类，它由支持Servlet（具有Servlet引擎）的WEB服务器调用和启动运行。一个Servlet程序负责处理它所对应的一个或一组URL地址的访问请求，并接收客户端发出的访问请求信息和产生响应内容。
+2">
+<meta property="og:image" content="https://github.com/1011641270/blog/blob/gh-pages/images/022.jpg?raw=true">
+<meta property="og:image" content="https://github.com/1011641270/blog/blob/gh-pages/images/023.jpg?raw=true">
+<meta property="og:image" content="https://github.com/1011641270/blog/blob/gh-pages/images/024.jpg?raw=true">
+<meta property="og:updated_time" content="2015-06-25T05:53:40.166Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Servlet学习">
+<meta name="twitter:description" content="Servlet
+1 概念
+Servlet技术是Sun公司提供的一种实现动态网页的解决方案，它是基于Java编程语言的WEB服务器端编程技术。一个Servlet程序就是一个实现了特殊接口的 Java类，它由支持Servlet（具有Servlet引擎）的WEB服务器调用和启动运行。一个Servlet程序负责处理它所对应的一个或一组URL地址的访问请求，并接收客户端发出的访问请求信息和产生响应内容。
+2">
+  
+    <link rel="alternative" href="/atom.xml" title="Swust - Tian_dd" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  
+</head>
+<body>
+<div id="container">
+  <div id="wrap">
+    <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Swust - Tian_dd</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="http://www.baidu.com/baidu" method="get" accept-charset="utf-8" class="search-form">
+          <input type="search" name="word" maxlength="20" class="search-form-input" placeholder="Search">
+          <input type="submit" value="" class="search-form-submit">
+          <input name=tn type=hidden value="bds">
+          <input name=cl type=hidden value="3">
+          <input name=ct type=hidden value="2097152">
+          <input type="hidden" name="si" value="">
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+    <div class="outer">
+      <section id="main"><article id="post-Servlet学习" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/11/27/Servlet学习/" class="article-date">
+  <time datetime="2014-11-27T12:44:12.000Z" itemprop="datePublished">2014-11-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Servlet学习
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Servlet</p>
+<p>1 概念</p>
+<p>Servlet技术是Sun公司提供的一种实现动态网页的解决方案，它是基于Java编程语言的WEB服务器端编程技术。一个Servlet程序就是一个实现了特殊接口的 Java类，它由支持Servlet（具有Servlet引擎）的WEB服务器调用和启动运行。一个Servlet程序负责处理它所对应的一个或一组URL地址的访问请求，并接收客户端发出的访问请求信息和产生响应内容。</p>
+<p>2 servlet功能</p>
+<p>获取客户端通过HTML的FORM表单递交的数据和URL后面的参数信息<br>创建对客户端的响应消息内容<br>访问服务器端的文件系统<br>连接数据库并开发基于数据库的应用<br>调用其它的Java类<br><a id="more"></a><br>3 servlet特点</p>
+<p>Servlet是一个供其他Java程序（Servlet引擎）调用的Java类，它不能独立运行，它的运行完全由Servlet引擎来控制和调度。<br>Servlet引擎是一种容器程序，它负责管理和维护所有Servlet对象的生命周期。Servlet的加载、执行流程、以及如何接收客户端发送的数据和如何将数据传输到客户端等具体的底层事务，都是由Servlet引擎来实现的。Servlet引擎负责将客户端的请求信息转交给Servlet和将Servlet生成的响应信息返回给客户端。<br>Servlet属于一种插件，它是一个提供了一些约定方法供容器去调用的类，它只负责在自身的方法中接受并处理容器传递进来的数据，以及生成并返回给容器去使用的数据和状态信息。<br>Servlet的最常见应用在于读取WEB浏览器传递给WEB服务器的参数和生成WEB服务器返回给WEB浏览器的动态网页文档内容；Serlvet也能获取WEB浏览器发送的HTTP请求消息中的各个请求头和请求行信息，以及生成用于WEB服务器发送的HTTP响应消息中的状态行和响应头信息；Serlvet还能获取WEB服务器和Servlet引擎自身的一些环境和状态信息。<br>Servlet程序的运行过程就是它与Servlet引擎的交互过程，Servlet程序只与Servlet引擎打交道，它并不与Web服务器和客户端进行任何直接的交互。<br>Servlet本身就是Java语言的一个应用，具有Java语言的所有优势，能完成普通Java程序所能完成的所有功能。<br>Web服务器上可以布置多个功能各不相同的Servlet，每个Servlet 都应宣称它可以处理何种样式的URL，当符合样式的URL请求到达时，Servlet引擎调用相应的Servlet进行处理。 </p>
+<p>4 servlet查询数据库的过程</p>
+<p><img src="https://github.com/1011641270/blog/blob/gh-pages/images/022.jpg?raw=true" alt="ui-demo"></p>
+<p>5 servlet运行过程</p>
+<p>1 Servlet引擎检查是否已经装载并创建了该Servlet的实例对象。如果是，则直接执行第4步，否则，执行第2步。<br>2 装载并创建该Servlet的一个实例对象。<br>3 调用Servlet实例对象的init()方法。<br>4 创建一个用于封装HTTP请求消息的HttpServletRequest对象和一个代表HTTP响应消息的HttpServletResponse对象，然后调用Servlet的service()方法并将请求和响应对象作为参数传递进去。<br>5 WEB应用程序被停止或重新启动之前，Servlet引擎将卸载Servlet，并在卸载之前调用Servlet的destroy()方法。</p>
+<p>6 servlet多线程机制</p>
+<p>Servlet体系结构是建立在Java多线程机制之上的，它的生命周期是由Web容器负责的。<br>当客户端第一次请求某个Servlet时，Servlet 容器将会根据web.xml配置文件实例化这个Servlet类。当有新的客户端请求该Servlet时，一般不会再实例化该Servlet类，也就是有 多个线程在使用这个实例。<br>Servlet容器会自动使用线程池等技术来支持系统的运行</p>
+<p><img src="https://github.com/1011641270/blog/blob/gh-pages/images/023.jpg?raw=true" alt="ui-demo"></p>
+<p>7 Servlet、Servlet容器 与Servlet API的关系</p>
+<p><img src="https://github.com/1011641270/blog/blob/gh-pages/images/024.jpg?raw=true" alt="ui-demo"></p>
+<p>8 doXxx方法</p>
+<p>如果要在service方法中对不同的请求方式进行不同的处理，那么首先必须判断客户端的请求方式，然后通过选择语句对每种方式分别进行处理。<br>HttpServlet类为每一种HTTP请求方式都定义了一个对应的doXxx方法，例如，与GET请求方式对应的是doGet方法，与POST请求方式对应的是doPost方法。<br>HttpServlet中重载的Service方法根据客户端的请求方式，分别调用与之对应的doXxx方法来完成具体的处理和响应细节，并将它接受的两个参数传递给该doXxx方法，例如，如果HTTP请求方式为GET，则调用doGet方法。<br>HttpServlet中的doXxx处理方式是回应给客户端一条不支持该请求方式的信息，这就好比一个人虽然接听了你的电话，但他回话的内容却是“不认识你”。只要覆盖了doGet方法，即使没有覆盖doHead方法，Servlet也可以支持HEAD请求方式。<br>9 servlet session cookie  application</p>
+<p>关于session和cookie 请看 <a href="http://my.oschina.net/tdd/blog/341545" target="_blank" rel="external">http://my.oschina.net/tdd/blog/341545</a>  <a href="http://my.oschina.net/tdd/blog/342064" target="_blank" rel="external">http://my.oschina.net/tdd/blog/342064</a> </p>
+<p>用于保存整个WebApplication的生命周期内都可以访问的数据<br>在API中表现为ServletContext<br>通过HttpServlet的getServletContext方法可以拿到<br>通过ServletContext的 get / setAttribute方法取得/设置相关属性<br>10 Servlet中的请求转发<br><a href="http://blog.csdn.net/redbednil/article/details/2127682" target="_blank" rel="external">http://blog.csdn.net/redbednil/article/details/2127682</a><br>11 servlet生命周期 </p>
+<p>1、只有一个对象<br>2、第一次请求的时候被初始化，只一遍 【类加载】<br>3、初始化后先调用init方法，只一遍<br>4、每个请求，调用一遍serviceservicedoGet/doPost。以多线程的方式运行<br>        4.1不要在servlet中设计成员变量。【涉及到多线程的同步问题，见6】<br>5、卸载前调用destroy方法</p>
+<p>12 乱码</p>
+<p>  页面本身有中文的时候<br>解决办法：servlet：resp.setContentType(“text/html;charset=gbk”);<br>Jsp: &lt;%@ page contentType=”text/html;charset=gb2312”%&gt;<br>注意：一定要写在PrintWriter out = resp.getWriter();之前<br>  解决get方式乱码问题：<br>解决办法：修改server.xml àURIEncoding=”GBK”<br>  解决post方式提交内容的乱码<br>解决办法：request.setCharacterEncoding(“GBK”);<br>  一定要写在存取第一个参数之前<br>不要调用response.setCharacterEncoding(“GBK”);<br>   <jsp:param name="user" value="<%=s%>">，url地址包含中文参数<br>解决办法：&lt;%request.setCharacterEncoding(“GBK”);%&gt;</jsp:param></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="/2014/11/27/Servlet学习/" data-id="cibbry2p60006p8o3ffbeqmqo" class="article-share-link" data-share="baidu">分享到</a>
+      
+
+      
+        <a href="/2014/11/27/Servlet学习/#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/11/27/单例模式/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">
+        
+          单例模式
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/11/21/模拟tomcat/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">模拟Tomcat</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+  <section id="comments">
+    <div id="ds-thread" class="ds-thread" data-thread-key="2014/11/27/Servlet学习/" data-title="Servlet学习" data-url="/2014/11/27/Servlet学习/"></div>
+  </section>
+</section>
+      
+      <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Design-Pattern/">Design Pattern</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Entertainment/">Entertainment</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hadoop/">Hadoop</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Maven/">Maven</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mysql/">Mysql</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Oracle/">Oracle</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tomcat/">Tomcat</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/XML/">XML</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/go/">go</a><span class="category-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design-Pattern/">Design Pattern</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Entertainment/">Entertainment</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hadoop/">Hadoop</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hibernate/">Hibernate</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Https/">Https</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">16</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Json/">Json</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Maven/">Maven</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Memory/">Memory</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mongdb/">Mongdb</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/">Mysql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/">Oracle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Robomongo/">Robomongo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringMVC/">SpringMVC</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tomcat/">Tomcat</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XML/">XML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go/">go</a><span class="tag-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Design-Pattern/" style="font-size: 17.5px;">Design Pattern</a> <a href="/tags/Entertainment/" style="font-size: 10px;">Entertainment</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hadoop/" style="font-size: 15px;">Hadoop</a> <a href="/tags/Hibernate/" style="font-size: 10px;">Hibernate</a> <a href="/tags/Https/" style="font-size: 10px;">Https</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/Json/" style="font-size: 10px;">Json</a> <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/Maven/" style="font-size: 12.5px;">Maven</a> <a href="/tags/Memory/" style="font-size: 10px;">Memory</a> <a href="/tags/Mongdb/" style="font-size: 12.5px;">Mongdb</a> <a href="/tags/Mysql/" style="font-size: 12.5px;">Mysql</a> <a href="/tags/Oracle/" style="font-size: 10px;">Oracle</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Robomongo/" style="font-size: 10px;">Robomongo</a> <a href="/tags/Spring/" style="font-size: 10px;">Spring</a> <a href="/tags/SpringMVC/" style="font-size: 12.5px;">SpringMVC</a> <a href="/tags/Tomcat/" style="font-size: 10px;">Tomcat</a> <a href="/tags/XML/" style="font-size: 10px;">XML</a> <a href="/tags/go/" style="font-size: 12.5px;">go</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">9</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">近期文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/06/20/Linux命令/">Linux 用户3个命令小技巧</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/17/Django1.8+Python3.4+Mysql5.5/">Django1.8+Python3.4+Mysql5.5</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/15/Python爬虫/">Python爬虫</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/11/Python入门/">Python入门</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/09/go语言调用API实现分词/">go语言调用API实现分词</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">友情链接</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="http://weibo.com/3201776564/profile?topnav=1&wvr=6" target="_blank">新浪微博</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+      
+    </div>
+    <footer id="footer">
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Tian_dd<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      .
+      Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>
+    </div>
+	
+	<div>
+	
+	&nbsp;&nbsp;<font color="red" size="2px">Total Views:</font><span id="busuanzi_value_site_pv"></span><font color="red">.</font>
+    &nbsp;&nbsp;&nbsp;&nbsp;<font color="red" size="2px">您是第</font><span id="busuanzi_value_site_uv"></span><font color="red" size="2px">个访客.</font>
+
+	</div>
+  </div>
+  
+</footer>
+
+
+  </div>
+  <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+  <!-- totop start -->
+<div id="totop">
+<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+</div>
+
+<!-- totop end -->
+
+<!-- 多说公共js代码 start -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"tian-dd"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共js代码 end -->
+
+
+<!-- 百度分享 start -->
+
+<div id="article-share-box" class="article-share-box">
+  <div id="bdshare" class="bdsharebuttonbox article-share-links">
+    <a class="article-share-weibo" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a class="article-share-weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a class="article-share-qq" data-cmd="sqq" title="分享到QQ"></a>
+    <a class="article-share-renren" data-cmd="renren" title="分享到人人网"></a>
+    <a class="article-share-more" data-cmd="more" title="更多"></a>
+  </div>
+</div>
+<script>window._bd_share_config={"common":{},"share":{"bdCustomStyle":"/css/bdshare.css"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<!-- 百度分享 end -->
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+</div>
+</body>
+</html>
